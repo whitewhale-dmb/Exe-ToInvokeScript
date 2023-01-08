@@ -5,5 +5,5 @@ This Powershell script will take an EXE and compress and base-64 encode it withi
 Create a Powershell-invoked version of an EXE:
 
 ```
-./Exe-ToInvokeScript.ps1 -InFile <file.exe> -OutFile ./Invoke-File.ps1
+./Exe-ToInvokeScript.ps1 -InFile <file.exe> -OutFile <outfile.ps1>
 ```
